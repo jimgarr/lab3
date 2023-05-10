@@ -58,3 +58,6 @@ static int[] reversed(int[] arr) {
     return newArray;
 }
 ```
+
+## Part 3
+In lab 3 I learned how to use the -cp command with the .jar files using the ;. I didn't know before hand that you could use ; to include multiple jar files in one line. In lab 2, I learned how to start a local server. I didn't know that you could start a local server from your own computer with a local host. 
