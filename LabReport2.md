@@ -17,6 +17,19 @@ Again, the first method that is called is Server.start(port, new Handler()) whic
 Both examples are ones in which the correct input is given. If the path doesn't include /add-message (for example /add-messaggee), the Web Server instead outputs "404 Not Found!". 
 
 ## Part 2
+Below is the code that tests the method reversed(int[] arr) in the class ArrayExamples with a failure inducing input. 
 ```
-Hey
+@Test
+  public void testReversed3Array() {
+    int[] testArray = {1,2,3};
+    assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(testArray));
+  }
+```
+Below is an example of a test of reversed that doesn't use a failure inducing input. 
+```
+@Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
 ```
