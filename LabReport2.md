@@ -2,4 +2,4 @@
 ## Description
 This lab report includes ceating a Web Server called StringServer which uses the path input from URL to add Strings to the page. It also includes how to identify bugs and what types of inputs cause these bugs. 
 ## Part 1
-Below is the code for String Server.
+Below is the code for String Server. ![String Server Code](labReport2Code.png)
