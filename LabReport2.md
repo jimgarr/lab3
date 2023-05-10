@@ -38,3 +38,23 @@ Below is an example of a test of reversed that doesn't use a failure inducing in
 The first test fails but the second test passes as shown in the image below. The failed test states that the value at the first index should be 3 but is instead 0. And since the second test passes, JUnit returns the test as a success. Since I had 5 tests in total, it was one of the 3 tests that passed. 
 
 ![Testing Output](labReport2Tests.png)
+
+Below is the code for the method with the bugs in it. Below that is the code with the bugs fixed. There were 2 bugs in the code. The first was that arr was being modified instead of newArray. The second was that the method returned arr but it should be returning newArray.
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+}
+```
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+}
+```
