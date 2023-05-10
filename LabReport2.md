@@ -17,7 +17,7 @@ Again, the first method that is called is Server.start(port, new Handler()) whic
 Both examples are ones in which the correct input is given. If the path doesn't include /add-message (for example /add-messaggee), the Web Server instead outputs "404 Not Found!". 
 
 ## Part 2
-Below is the code that tests the method reversed(int[] arr) in the class ArrayExamples with a failure inducing input. 
+Below is the code that tests the method reversed(int[] arr) in the class ArrayExamples with a failure inducing input. The test named testReversed3Array uses an int array that contains 1,2,3.
 ```
 @Test
   public void testReversed3Array() {
@@ -25,7 +25,8 @@ Below is the code that tests the method reversed(int[] arr) in the class ArrayEx
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(testArray));
   }
 ```
-Below is an example of a test of reversed that doesn't use a failure inducing input. 
+
+Below is an example of a test of reversed that doesn't use a failure inducing input. the test named testReversed uses an empty int array.
 ```
 @Test
   public void testReversed() {
@@ -33,3 +34,7 @@ Below is an example of a test of reversed that doesn't use a failure inducing in
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
 ```
+
+The first test fails but the second test passes as shown in the image below. The failed test states that the value at the first index should be 3 but is instead 0. And since the second test passes, JUnit returns the test as a success. Since I had 5 tests in total, it was one of the 3 tests that passed. 
+
+![Testing Output](labReport2Tests.png)
