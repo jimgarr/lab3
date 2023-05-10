@@ -24,6 +24,19 @@ class Handler implements URLHandler {
     }
 }
 
+class Server {
+    public static void start(int port, URLHandler handler) throws IOException {
+        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+
+        //create request entrypoint
+        server.createContext("/", new ServerHttpHandler(handler));
+
+        //start the server
+        server.start();
+        System.out.println("Server Started! Visit http://localhost:" + port + " to visit.");
+    }
+}
+
 class StringServer {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
