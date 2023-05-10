@@ -1,3 +1,5 @@
 # Lab Report 2
 ## Description
-This lab report includes how to download Visual Studio Code, how to connect to the remote access computer using ssh, and then running some commands once connected.
+This lab report includes ceating a Web Server called StringServer which uses the path input from URL to add Strings to the page. It also includes how to identify bugs and what types of inputs cause these bugs. 
+
+## Part 1
